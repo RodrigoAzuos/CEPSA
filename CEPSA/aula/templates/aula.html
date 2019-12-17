@@ -10,27 +10,31 @@ Aulas
         <div class="col-xl-4 col-sm-12">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <h5 class="card-title">Alunos presentes</h5>
+              {%if aula.status == 'pendente'%}
+                <p class="h1 text-success">0</p>
+                {% else %}
+                <p class="h1 text-success">{{alunos.count}}</p>
+                {% endif %}
+              <p class="card-text"><small class="text-muted">última atualização à 1 hora</small></p>
             </div>
           </div>
         </div>
         <div class="col-xl-4 col-sm-12">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <h5 class="card-title">Ocorrencias</h5>
+              <p class="h1 text-info">{{aula.ocorrencias.all.count}}</p>
+              <p class="card-text"><small class="text-muted">última atualização à 3 mins</small></p>
             </div>
           </div>
         </div>
         <div class="col-xl-4 col-sm-12">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <h5 class="card-title">Alunos Faltosos</h5>
+              <p class="h1 text-warning">0</p>
+              <p class="card-text"><small class="text-muted">última atualização à 1 hora</small></p>
             </div>
           </div>
         </div>

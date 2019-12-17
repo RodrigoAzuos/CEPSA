@@ -5,13 +5,14 @@ class AulaForm(ModelForm):
 
     class Meta:
         model = Aula
-        fields = ('material', 'aulas_ministradas', 'data', 'assunto', 'descricao',)
+        fields = ('material', 'aulas_ministradas', 'data', 'assunto', 'descricao','turma', )
         widgets = {
             'aulas_ministradas': NumberInput(attrs={'class': 'form-control'}),
             'data': DateTimeInput(attrs={'class': 'form-control', 'type': 'date'}),
             'assunto': TextInput(attrs={'class': 'form-control'}),
             'descricao': Textarea(attrs={'class': 'form-control'}),
             'material': FileInput(attrs={'class': 'form-control'}),
+            'turma': Select(attrs={'class': 'form-control'}),
         }
 
 class OcorrenciaForm(ModelForm):

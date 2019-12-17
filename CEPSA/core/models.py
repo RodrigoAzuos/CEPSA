@@ -82,8 +82,7 @@ class Turma(Base):
 		verbose_name = 'Turma'
 		verbose_name_plural = 'Turmas'
 
-
 	def __str__(self):
-		return self.ministrante + ' ' + self.disciplina
+		return "%s - %s " %(self.disciplina,self.ministrante)
 
 
