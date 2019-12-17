@@ -1,5 +1,5 @@
 from django.forms import ModelForm, Select, NumberInput, DateTimeInput, TextInput, SelectDateWidget, Textarea, FileInput
-from aula.models import Aula
+from aula.models import Aula, Ocorrencia
 
 class AulaForm(ModelForm):
 
@@ -12,4 +12,14 @@ class AulaForm(ModelForm):
             'assunto': TextInput(attrs={'class': 'form-control'}),
             'descricao': Textarea(attrs={'class': 'form-control'}),
             'material': FileInput(attrs={'class': 'form-control'}),
+        }
+
+class OcorrenciaForm(ModelForm):
+
+    class Meta:
+        model = Ocorrencia
+        fields = ('descricao', 'titulo',)
+        widgets = {
+            'titulo': TextInput(attrs={'class': 'form-control'}),
+            'descricao': Textarea(attrs={'class': 'form-control'}),
         }

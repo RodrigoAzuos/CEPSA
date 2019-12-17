@@ -7,6 +7,7 @@ from core.models import Base, Turma
 class Ocorrencia(Base):
 	titulo = models.CharField('tirulo', max_length=128, null=False, blank=False)
 	descricao = models.CharField('Descricao', max_length=128, null=False, blank=False)
+	aula = models.ForeignKey('Aula', on_delete=models.CASCADE, null=True, blank=True, related_name='ocorrencias')
 
 	class Meta:
 		verbose_name = 'Ocorrencia'
@@ -25,7 +26,6 @@ class Aula(Base):
 	aulas_ministradas = models.IntegerField('Aulas ministradas', null=False, blank=False)
 	data = models.DateField(null=False, blank=False)
 	assunto = models.CharField('Assunto', max_length=128, null=False, blank=False)
-	ocorecia = models.ForeignKey(Ocorrencia, on_delete=models.CASCADE, null=True, blank=True)
 	descricao = models.CharField('Descricao', max_length=128, null=False, blank=False)
 	frequencia = models.ManyToManyField(Aluno, related_name='aulas_assistidas')
 	turma = models.ForeignKey(Turma, on_delete=models.CASCADE, related_name='aulas')
