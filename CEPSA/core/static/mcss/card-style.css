@@ -1,0 +1,11 @@
+.aula-pendente {
+    border-color: #5e72e4 !important;
+}
+
+.aula-andamento {
+    border-color: #ffc107!important;
+}
+
+.aula-finalizada {
+    border-color: #28a745!important;
+}

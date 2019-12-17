@@ -1,0 +1,106 @@
+{% extends 'base_dashboard.html'%}
+{% load staticfiles%}
+
+{% block page%}
+Aulas
+{%endblock%}
+
+{% block topScore%}
+        <div class="col-12">
+            <div class="row">
+                <div class=" col-6 "></div>
+                <div class="col-6">
+                    <div class="float-right">
+                    <!-- Botão para acionar modal -->
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#NovaAula">
+                          Registrar aula
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock%}
+
+{%block body%}
+        <div class="card-columns">
+            {% for a in aulas %}
+                <div class="card aula-{{a.status}} mb-3">
+                    <div class="card-header float-light">
+                        <div class="row">
+
+                            <div class="col-md-8 text-sm text-muted text-capitalize">
+                                {{a.status}}
+                            </div>
+
+                            <div class="col-md-4 text-right">
+                                <a class="btn btn-sm btn-outline-primary" href="#">Visualizar</a>
+                            </div>
+                        </div>
+                    </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{a.assunto}}</h5>
+                    <p class="card-text">{{a.descricao}}</p>
+                    <p class="card-text"><small class="text-muted">{{a.data}}</small></p>
+
+                  </div>
+                    {% if a.material %}
+                        <div class="card-footer">
+                            <a class="btn btn-sm btn-outline-primary" href="{{a.material.url}}" target="_blank">Baixar material</a>
+                        </div>
+                    {% endif %}
+                </div>
+            {% endfor %}
+        </div>
+
+          <div class="card">
+            <div class="card-footer py-4">
+              <nav aria-label="...">
+                <ul class="pagination justify-content-end mb-0s">
+                  <div class="row">
+                  <li class="page-item ">
+                    <a class="" href="?page={{ 1 }}" tabindex="-1">
+                      <i class="fas fa-angle-left"></i>
+                      <span class="sr-only">Primeira</span>
+                    </a>
+                  </li>
+                  ..
+                  &nbsp;
+                  <li class="page-item ">
+                    <a class="" href="?page={{ anterior }}" tabindex="-1">
+                      <i class="fas fa-angle-left"></i>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                  </li>
+                     &nbsp; página &nbsp;
+
+                    <a class="active" href="?page={{page}}">{{page}} <span class="sr-only">(current)</span></a>
+
+                    &nbsp; de &nbsp;
+
+                    <a  href="?page={{ultima}}">{{ultima}} <span class="sr-only">(current)</span></a>
+                     &nbsp;
+                     &nbsp;
+                  <li class="page-item ">
+                    <a class="  " href="?page={{proxima}}">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </li>
+                   &nbsp;
+                  ..
+                  <li class="page-item ">
+                    <a class="  " href="?page={{ultima}}">
+                      <i class="fas fa-angle-right"></i>
+                      <span class="sr-only">Ultima</span>
+                    </a>
+                  </li>
+                      &nbsp;&nbsp;&nbsp;
+                  </div>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+
+{%endblock%}
+
