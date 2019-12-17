@@ -1,2 +1,7 @@
 # CEPSA
-### Sistema desenvolvido para projeto de TCC do aluno Rodrigo souza, estudante de Analise e desenvoldimento de sistemas no _Instituto Federal do Piauí.
+
+Sistema desenvolvido para projeto de TCC do aluno Rodrigo souza, estudante de Analise e desenvoldimento de sistemas no _Instituto Federal do Piauí_.
+
+### Sobre
+
+_O uso da internet tem se tornado cada vez mais comum por vários meios, tornando os aparelhos celulares indispensáveis à vida em sociedade.  Usar essas ferramentas de uma forma a trazer benefícios é um objeto de estudo de muitas áreas, e a educação é uma delas. Observando o modo como os alunos de ensino superior e médio se portam em relação ao uso das novas tecnologias,surge a necessidade de fazer com que as salas de aula acompanhem esta evolução.  Surgem novos conceitos como sala de aula invertida,Smart classroom, entre outros. O aparecimento de novos conceitos trazem consigo novas metodologia de ensino para dentro da sala de aula, com o objetivo de prender a atenção do aluno e fazer com que se apropriem do conteúdo ministrado. A tecnologia da Informação deve estar presente dentro das escolas e faculdades para inserir no contexto de sala de aula um ambiente conectado e automatizado. **O objetivo deste trabalho é projetar uma sistema de Smart classroom que usando os** **conceitos de internet das coisas visa automatizar o carregamento de conteúdos postados pelos professores, observação da** **frequência além de criar uma ferramenta** **para economizar a o gasto de energia elétrica** **nas dependências da sala de** aula._
